@@ -398,7 +398,7 @@ service_check() {
 replacer() {
   cd $BASE
   # Deal with a couple initial modifications
-  sed -i "s|\"/calibre-library\"| \"/opt/calibre-web\"|" dirs.json ./scripts/auto_library.py
+  #sed -i "s|\"/calibre-library\"| \"/opt/calibre-web\"|" dirs.json ./scripts/auto_library.py
   sed -i -e "s|\"$OLD_CONFIG/$CONVERSION\"| \"$CONFIG/$CONVERSION\"|" \
     -e "s|\"/$INGEST\"| \"/opt/$INGEST\"|" dirs.json
 
