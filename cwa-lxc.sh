@@ -193,7 +193,8 @@ install() {
     inotify-tools \
     zip \
     unzip \
-    sqlite3
+    sqlite3 \
+    python3-dev
   msg_done "Dependencies installed!"
 
   msg_start "Installing Kepubify..."
@@ -219,7 +220,7 @@ install() {
   wget -q https://github.com/janeczku/calibre-web/raw/master/library/metadata.db -P /opt/calibre-web
   cd /opt/calibre-web
   source /opt/venv/bin/activate
-  uv -q pip install calibreweb
+  uv -q pip install calibreweb[goodreads,metadata,kobo]
   uv -q pip list | grep calibreweb | awk '{print $2}' >"$VER_DIR"/calibre-web.txt
   msg_done "Installed Calibre-Web!"
 
