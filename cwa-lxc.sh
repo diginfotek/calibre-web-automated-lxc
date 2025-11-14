@@ -155,7 +155,7 @@ parse_params "$@"
 VER_DIR="/opt/versions"
 OLD_BASE="/app/calibre-web-automated"
 BASE="/opt/cwa"
-SCRIPTS="$BASE/scripts"
+SCRIPTS="$BASE/root/app/calibre-web/scripts"
 APP="$BASE/cps"
 OLD_CONFIG="/config"
 CONFIG="/var/lib/cwa"
@@ -435,7 +435,7 @@ replacer() {
       -e "s/commit/calibreweb_version/" $APP/templates/admin.html
 
   # patch the calibre-web python libs in the virtualenv
-  cp -r /opt/cwa/root/app/calibre-web/cps/* /opt/venv/lib/python3*/site-packages/calibreweb/cps
+  cp -r /opt/cwa/cps/* /opt/venv/lib/python3*/site-packages/calibreweb/cps
 }
 
 script_generator() {
