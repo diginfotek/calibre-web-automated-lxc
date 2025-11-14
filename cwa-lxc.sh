@@ -185,7 +185,6 @@ install() {
     libldap2-dev \
     libsasl2-dev \
     ghostscript \
-    libldap-2.5-0 \
     libmagic1 \
     libsasl2-2 \
     libxi6 \
