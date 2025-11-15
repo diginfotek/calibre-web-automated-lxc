@@ -78,7 +78,7 @@ setup_colours
 # }
 
 bling() {
-  local frames=('▹▹▹▹▹' '▸▹▹▹▹' '▹▸▹▹▹' '▹▹▸▹▹' '▹▹▹▸▹' '▹▹▹▹▸')
+  local frames=('▹▹▹▹▹' ' ▹▹▹▹' '▹ ▹▹▹' '▹▹ ▹▹' '▹▹▹ ▹' '▹▹▹▹ ')
   local arrow_i=0
   local interval=0.1
   printf "\e[?25l"
