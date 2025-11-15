@@ -429,7 +429,7 @@ replacer() {
   sed -i "s|\"$CONFIG/post_request\"|\"$OLD_CONFIG/post_request\"|; s|python3|/opt/venv/bin/python3|g" $APP/cwa_functions.py
   sed -i -e "/^# Define user/,/^os.chown/d" -e "/nbp.set_l\|self.set_l/d" -e "/def set_libr/,/^$/d" \
     ./scripts/{convert_library.py,kindle_epub_fixer.py,ingest_processor.py}
-  sed -i "/chown/d" ./scripts/auto_library.py
+  #sed -i "/chown/d" ./scripts/auto_library.py
   sed -i -n '/Linuxserver.io/{x;d;};1h;1!{x;p;};${x;p;}' $APP/templates/admin.html &&
     sed -i -e "/Linuxserver.io/,+3d" \
       -e "s/commit/calibreweb_version/" $APP/templates/admin.html
